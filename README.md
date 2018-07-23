@@ -65,7 +65,7 @@ before your virtual environment will be completely operational.
 
 Clone the repo from GitHub and run the following git command
 ```
-git clone https://github.com/josezindia/Syllus.git
+git clone https://github.com/sheggen/Syllus.git
 
 ```
 
