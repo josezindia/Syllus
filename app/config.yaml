@@ -86,8 +86,10 @@ DEBUG:
   # user: "borga"  #Professor Access
   # user: "doej" #Program Access
   
-# contributors: TODO: Add the names and graduation year of the contributors here e.g. 
-#   - name: "Alice Bob"
-#     username: "boba"
-#     year: 2018
-#   - 
+ contributors: #Add the names and graduation year of the contributors goes here 
+  - name: "contributor1"
+    username: "contributor1"
+    year: 2018
+  - name: "contributor2"
+    username: "contributor2"
+    year: 2019
