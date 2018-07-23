@@ -10,7 +10,9 @@ The College’s policy requires instructors to keep records of all the syllabus 
    - [Getting Your Development Environment Running](#getting-your-development-environment-running) 
 - [Deploying on a Server](#deploying-on-a-server)
 - [Additional Server Setup](#additional-server-setup)
+- [Working with the Flask Template](#working-with-the-flask-template)
 - [Contributing and Code of Conduct](#contributing-and-code-of-conduct)
+- [Versioning](#versioning)
 - [Repository Owners](#repository-owners)
 - [License](#license)
 
@@ -125,10 +127,49 @@ These tools will require additional steps by your server admin in order to get t
 2. [Logrotate](https://docs.google.com/document/d/1xtV__kmA8p0uTg_4TtbzYYLtqX5eZGckotQSmAvuCVA/edit?usp=sharing)
 3. Shibboleth (Optional)
 
+## Working with the Flask Template
+***File Hierarchy***
+
+- Project Name
+   - App
+      -static
+      -templates
+        -start.html
+      - __init__.py
+      - allImports.py
+      - config.yaml
+      - models.py
+      - start.py # this an example of a python file that renders a page
+   - Data
+       - db.sqlite
+   - Venv
+   - app.py
+   - create_db.py
+   - setup.sh
+
+Above you will find the file structure for the flask template. You will be mostly working with the app/ directory.
+Some ***important*** files and directories.
+
+- models.py - This file contains the database schema or the tables and columns that will be in database. If you want to make a new table then you will add a class to this file, see the example in the models.py file. Once you are done making changes to this file run create_db.py to make the changes in the database.
+- app/ directory - This directory will contain a python module in order for python files to be recognized they must be added to the __init__.py file in this directory.
+- start.py - This file is a very quick example of a python file that will render a page. This file processes and renders the start.html file located under templates.
+
+***Reading and Writing to the database***
+
+In order to read from a database you will need to make a query to get the data. You can find out more about queries at the [peewee site](http://docs.peewee-orm.com/en/latest/peewee/querying.html)one quick example of a query would be the following:
+
+```query = tableName.get( condition = something )```
+
+This will return a python object that will have the data as attributes. You can pass this object to the html file. You can access this data by typing query.Column.
+
+NOTE: Needs more details on asking query to finish reading and writing to the database.
 
 ## Contributing and Code of Conduct
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+The versioning scheme that we use is [SemVer](http://semver.org/).
 
 ## Repository Owners
 
