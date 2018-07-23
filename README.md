@@ -5,14 +5,14 @@ The College’s policy requires instructors to keep records of all the syllabus 
 
 ## Table of Contents
 - [Requirements](#requirements)
-- [Setting Up a Development Environment](#setting_Up_a_Development_Environment)
+- [Setting Up a Development Environment](#setting-up-a-development-environment)
    - [Installation](#installation)
    - [Requirements](#requirements)
-   - [Getting Your Development Environment Running](#getting_Your_Development_Environment_Running) 
-- [Working with the flask template](#working_with_the_flask_template)
-- [Setting up a Production Environment](#setting)
-- [Contributing and Code of Conduct](#CONTRIBUTING)
-- [Repository Owners](#repository_Owners)
+   - [Getting Your Development Environment Running](#getting-your-development-environment-running) 
+- [Working with the flask template](#working-with-the-flask-template)
+- [Setting up a Production Environment](#setting-up-a-production-environment)
+- [Contributing and Code of Conduct](#contributing-and-code-of-conduct)
+- [Repository Owners](#repository-owners)
 - [License](#license)
 
 ## Requirements
