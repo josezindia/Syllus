@@ -8,7 +8,8 @@ The College’s policy requires instructors to keep records of all the syllabus 
 - [Getting Started ](#getting-started )
    - [Cloud9 Setup Guide (Optional)](#cloud9-setup-guide-(optional))
    - [Getting Your Development Environment Running](#getting-your-development-environment-running) 
-- [Setting up a Production Environment](#setting-up-a-production-environment)
+- [Deploying on a Server](#deploying-on-a-server)
+- [Additional Server Setup](#additional-server-setup)
 - [Contributing and Code of Conduct](#contributing-and-code-of-conduct)
 - [Repository Owners](#repository-owners)
 - [License](#license)
@@ -64,7 +65,7 @@ git clone https://github.com/josezindia/Syllus.git
 
 ```
 
-**Step Two:Activate a virtual environment for the project**
+**Step Two: Activate a virtual environment for the project**
 In order to do this, all you have to do is type: ```source setup.sh``` into the Linux terminal. You might have to wait a minute or two as the tools you need for our application are downloaded into your virtual environment.
 However, after the setup is completed you should see the words (venv) at the front of your terminal.
 
@@ -108,9 +109,21 @@ and click the link in your terminal to check if it deployed correctly:
 The URL will take you to the application and allow you to see any changes you make to the system. 
 Note that this is a development environment, and is not production ready. 
 ```
-## Setting up a Production Environment
+## Deploying on a Server
 
-Please read [PRODUCTION.md](PRODUCTION.md) for details on how to get your production environment running. 
+### Dependencies
+1. [Apache2](https://help.ubuntu.com/lts/serverguide/httpd.html) - `sudo apt-get install apache2`
+2. [Python-Pip](https://pip.pypa.io/en/stable/) - `sudo apt-get install python-pip`
+3. [Virtualenv](https://virtualenv.pypa.io/en/stable) - `sudo apt install virtualenv`
+4. [WSGI](http://flask.pocoo.org/docs/0.11/deploying/mod_wsgi/) - `sudo apt-get install libapache2-mod-wsgi`
+5. [Flask](http://flask.pocoo.org/docs/0.11/) - `sudo pip install Flask`
+
+### Additional Server Setup:
+These tools will require additional steps by your server admin in order to get the application running. 
+
+1. [WSGI & Apache2 Sites-Enabled](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#installing-mod-wsgi)
+2. [Logrotate](https://docs.google.com/document/d/1xtV__kmA8p0uTg_4TtbzYYLtqX5eZGckotQSmAvuCVA/edit?usp=sharing)
+3. Shibboleth (Optional)
 
 
 ## Contributing and Code of Conduct
