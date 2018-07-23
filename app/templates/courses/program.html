@@ -1,0 +1,26 @@
+{% extends "/snips/base.html" %}
+{% set currentPage = "Courses" %}
+{% block body %}
+{# can't use currentPage because of scoping issues #}
+{% set page = "Courses" %}
+{# MY COURSES VIEW #}
+{% include 'snips/messages.html' %}
+{% if my_courses is not none %}
+  <h2>My Courses</h2>
+  {% include "snips/tableHeader.html" %}
+  {% for course in my_courses %}
+    {% include "snips/coursesRows.html" %}  
+  {% endfor %}
+  {% include "snips/tableFooter.html" %} 
+{% endif %}
+
+{# PROGRAM CHAIR VIEW #}
+<h2>{{ program_key }}</h2>
+{% include "snips/tableHeader.html" %}
+{% for course in programs_to_courses[program_key] %}
+  {% include "snips/coursesRows.html" %} 
+{% endfor %}
+{% include "snips/tableFooter.html" %} 
+<script type="text/javascript" src="static/js/local/courses.js"></script>
+
+{% endblock %}

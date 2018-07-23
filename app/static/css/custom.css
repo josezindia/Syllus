@@ -1,0 +1,57 @@
+body {
+    background-color: #f8f8f8;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #3E6B4C;
+}
+
+.btn-default {
+    background-color: #608B43;
+}
+
+.btn-default:hover {
+    background-color: #3E6B4C;
+}
+
+a {
+    color: #608B43;
+}
+
+.footer {
+    padding-top: 25px;
+    height: 25px; /* .push must be the same height as .footer */
+    text-align: center
+}
+
+* {
+    margin: 0;
+}
+
+html, body, .container {
+    min-height: 100%;
+    height: auto !important;
+}
