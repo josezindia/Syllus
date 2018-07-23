@@ -57,10 +57,12 @@ After you have entered in the URL, the last portion of the page asked you to cho
 All that is left is to hit the create workspace button and your workspace will be configured correctly.
 
 ### Getting Your Development Environment Running
+
 After you have created your workspace, there are three additional steps that you will have to complete
 before your virtual environment will be completely operational. 
 
 **Step One: Clone the repository from GitHub**
+
 Clone the repo from GitHub and run the following git command
 ```
 git clone https://github.com/josezindia/Syllus.git
@@ -68,6 +70,7 @@ git clone https://github.com/josezindia/Syllus.git
 ```
 
 **Step Two: Activate a virtual environment for the project**
+
 In order to do this, all you have to do is type: ```source setup.sh``` into the Linux terminal. You might have to wait a minute or two as the tools you need for our application are downloaded into your virtual environment.
 However, after the setup is completed you should see the words (venv) at the front of your terminal.
 
@@ -77,6 +80,7 @@ source setup.sh
 ```
 Note: In order for the application to work, you must activate the virtual environment.
 >***Note*** If you are not inside of the virtual environment you will see this error: ```ImportError: No module named flask.``` Whenever you get this error just activate the virtual environment again by entering the command ```source setup.sh.``` Also, If you ever want to deactivate the virtual environment for any reason just type ```deactivate``` into the terminal. 
+
 **Step Three: Setup Your Database**
 
 A couple of elements are necessary in order to get your database established. The first step is creating the SQLite file, we can create the file in the desired location through the use of one of our scripts.
@@ -128,7 +132,7 @@ These tools will require additional steps by your server admin in order to get t
 3. Shibboleth (Optional)
 
 ## Working with the Flask Template
-***File Hierarchy***
+**File Hierarchy**
 
 - Project Name
    - App
@@ -154,7 +158,7 @@ Some ***important*** files and directories.
 - app/ directory - This directory will contain a python module in order for python files to be recognized they must be added to the __init__.py file in this directory.
 - start.py - This file is a very quick example of a python file that will render a page. This file processes and renders the start.html file located under templates.
 
-***Reading and Writing to the database***
+**Reading and Writing to the database**
 
 In order to read from a database you will need to make a query to get the data. You can find out more about queries at the [peewee site](http://docs.peewee-orm.com/en/latest/peewee/querying.html)one quick example of a query would be the following:
 
